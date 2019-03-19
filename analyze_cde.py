@@ -71,3 +71,8 @@ for line in infile:
 print(mean(essay_lexical))
 print(mean(essay_mtld))
 print(mean(essay_ttr))
+
+csv_out = io.open("cde_lexdensity.csv", mode="w")
+csv_out.write("CDE\n")
+for essay in essay_lexical:
+  csv_out.write(str(essay) + '\n')
